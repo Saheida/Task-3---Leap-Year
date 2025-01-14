@@ -1,0 +1,12 @@
+name: run tests
+on: push
+jobs:
+    run_tests:
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v4
+              name: Checkout Code
+              with:
+                 token: ${{ secrets.GITHUB_TOKEN }}
+            - name: run the test
+              run: python test_leap_year.py        
