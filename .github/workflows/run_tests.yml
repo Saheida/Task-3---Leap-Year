@@ -8,3 +8,5 @@ jobs:
               name: Checkout Code
               with:
                  token: ${{ secrets.GITHUB_TOKEN }}
+            - name: run the test
+              run: python test_leap_year.py        
